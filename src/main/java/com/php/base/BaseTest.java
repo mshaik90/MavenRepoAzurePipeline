@@ -69,6 +69,7 @@ public class BaseTest {
 	     // cap.setCapability("browserName", "chrome");
 	       
 		}else if(browser.equalsIgnoreCase("chrome")) {
+			
 			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\mohsi\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		    WebDriverManager.chromedriver().setup();  
 		    ChromeOptions options = new ChromeOptions();
