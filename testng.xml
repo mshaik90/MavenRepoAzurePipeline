@@ -10,9 +10,7 @@
   <test name="BrowserStack Test - egde">
 		
 		<classes>
-			<class name="com.php.tetcases.LoginPageTest" />
-			
-			
+			<class name="com.php.tetcases.LoginPageTest" />						
 		</classes>
 
 	</test>
