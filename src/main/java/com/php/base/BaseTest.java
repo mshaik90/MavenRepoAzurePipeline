@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -70,7 +71,12 @@ public class BaseTest {
 		}else if(browser.equalsIgnoreCase("chrome")) {
 			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\mohsi\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		    WebDriverManager.chromedriver().setup();  
-			driver=new ChromeDriver();
+		    ChromeOptions options = new ChromeOptions();
+		    options.addArguments("--headless");
+		    options.addArguments("--disable-gpu");
+		    options.addArguments("--no-sandbox");
+		    options.addArguments("--disable-dev-shm-usage");
+		    driver = new ChromeDriver(options);
 		   // cap.setCapability("browserName", "edge");
 		       
 		}
